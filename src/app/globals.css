@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+
+body {
+    @apply bg-adaptive text-adaptive;
+    overflow-y: scroll;
+}
+
+.font-space {
+    font-family: var(--font-space);
+}
+
+.font-pixel {
+    font-family: var(--font-pixel);
+}
+
+.bg-gradient-intro {
+    background-image: linear-gradient(
+        to bottom,
+        #071444,
+        #3c3781,
+        #514a91,
+        #7d6f7f
+    );
+}
+
+.bg-adaptive {
+    @apply bg-back dark:bg-back-dark;
+}
+
+.bg-adaptive-invert {
+    @apply bg-fore dark:bg-fore-dark;
+}
+
+.fill-adaptive {
+    @apply fill-fore dark:fill-fore-dark;
+}
+
+.fill-adaptive-invert {
+    @apply fill-back dark:fill-back-dark;
+}
+
+.text-adaptive {
+    @apply text-fore dark:text-fore-dark;
+}
+
+.text-adaptive-invert {
+    @apply text-back dark:text-back-dark;
+}
+
+.bg-adaptive {
+    @apply bg-back dark:bg-back-dark;
+}
+
+.text-primary {
+    @apply text-yellow-950 dark:text-yellow-200;
+}
+
+.text-link {
+    @apply text-primary hover:bg-yellow-950 hover:dark:bg-yellow-200 hover:text-white hover:dark:text-black rounded-sm underline;
+}
+
+.divide-adaptive {
+    @apply divide-fore dark:divide-fore-dark divide-opacity-10 dark:divide-opacity-10;
+}
+
+.border-adaptive {
+    @apply border-fore dark:border-fore-dark border-opacity-10 dark:border-opacity-10;
+}
+
+.ring-adaptive {
+    @apply ring-fore dark:ring-fore-dark;
+}
+
+.bg-surface-adaptive {
+    @apply bg-surface dark:bg-surface-dark;
+}
